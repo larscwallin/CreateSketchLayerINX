@@ -191,7 +191,13 @@ class CreateSketchLayer(inkex.Effect):
           sketch_canvas = sketch_canvas[0]
                     
           if(sketch_canvas!=''):
-
+            
+            sketch_canvas_x = sketch_canvas.get('x')
+            sketch_canvas_y = sketch_canvas.get('y')
+            sketch_canvas_height = sketch_canvas.get('height')
+            sketch_canvas_width = sketch_canvas.get('width')
+            sketch_canvas_id = sketch_canvas.get('id') 
+            
             sketch_bitmap_path = self.createBitmapFile(sketch_canvas)
             
             if(sketch_bitmap_path != ''):
@@ -325,5 +331,3 @@ class CreateSketchLayer(inkex.Effect):
 # Create effect instance and apply it.
 effect = CreateSketchLayer()
 effect.affect()
-
-
