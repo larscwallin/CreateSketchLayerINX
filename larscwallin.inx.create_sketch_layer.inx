@@ -1,0 +1,82 @@
+<inkscape-extension>
+  <_name>Create Sketch Layer</_name>
+  <id>com.larscwallin.inx.create_sketch_layer</id>
+  <dependency type="executable" location="extensions">larscwallin.inx.create_sketch_layer.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+ 
+ 
+  <param name="where" type="string" _gui-text="Sketch save location"></param>
+  <param name="sketch_name" type="string" _gui-text="Sketch name"></param>
+  <param name="sketch_editor" type="string" _gui-text="Sketch editor"></param>  
+ 
+ <!--
+  <param name="what" type="string" _gui-text="What?"></param> 
+  <param name="remove_border" type="boolean" _gui-text="Remove element border?"></param>
+  <param name="replace_source" type="boolean" _gui-text="Replace original element?"></param>   
+  -->
+ 
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Sketch"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">larscwallin.inx.create_sketch_layer.py</command>
+  </script>
+</inkscape-extension>
+
+<!--
+
+
+        Contents
+
+        [hide]
+        1 boolean
+        2 int
+        3 float
+        4 string
+        5 description
+        6 enum
+        7 notebook
+        8 optiongroup
+        9 color
+        boolean
+
+        Gives a checkbox in the dialog; the default value may be "true" or "1", "false" or "0".
+
+        int
+
+        To get an integer; sort of textbox in the dialog.
+
+        float
+
+        To get an float number; sort of textbox in the dialog.
+
+        string
+
+        To get an character string; textbox in the dialog.
+
+        description
+
+        To show some text in the dialog.
+
+        enum
+
+        List of choices; the different choices are given by <item> elements.
+
+        notebook
+
+        To have different pages in the dialog; the other parameters are given inside <page> elements.
+
+        optiongroup
+
+        List of choices with rounded checkboxes; the different choices are given by <option> elements.
+
+        color
+
+        ??
+
+        Retrieved from "http://wiki.inkscape.org/wiki/index.php/INX_Parameters"
+-->
